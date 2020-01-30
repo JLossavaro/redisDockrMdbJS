@@ -16,6 +16,6 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use('/', index);
 app.use('/person', personRoute);
-app.use('/user'. userRoute)
+app.use('/user', userRoute)
 
 module.exports = app;

@@ -8,7 +8,7 @@ const sequelize = new Sequelize('postgres://postgres:postgres@localhost:5432/seq
 
 
 module.exports = {
-Sequelize: Sequelize,
-sequelize: sequelize
+    Sequelize: Sequelize,
+    sequelize: sequelize
 
 }
