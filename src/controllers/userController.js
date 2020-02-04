@@ -4,7 +4,6 @@ const User = require('./../models/user');
 
 
 exports.post = (req, res) => {
-    const vm = req.body;
     User.create({ 
         login: req.body.login,
         password: req.body.password,
@@ -18,10 +17,9 @@ exports.post = (req, res) => {
 
 
 exports.get = (req, res) => {
-    const vm = req.body;
-    User.create({ 
-}).then(function(){
-           }).catch(function(erro){res.send(
-               'Erro: Não foi registrado com sucesso!' + erro)
-           })
+    User.findAll().then(function(user){
+        res.status(200).json(user)
+    }).catch(function(erro){
+        res.send('Erro: Nao foi possivel listar'+ erro)
+    })
 };
